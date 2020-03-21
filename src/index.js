@@ -1,3 +1,9 @@
+/**
+ * Parser of array expression sequencies (WITHOUT BRACKETS)
+ * @param {Array} arr unparsed array of symbols with numbers & operations
+ * @returns {Array} parsed array numbers & operations
+ */
+
 function parser(arr) {
     let parsed = [];
     let item = '';
@@ -16,6 +22,12 @@ function parser(arr) {
     if (item.length) parsed.push(Number(item));
     return parsed;
 }
+
+/**
+ * Evaluate the given expression (WITHOUT BRACKETS)
+ * @param {Array} arr unparsed array of the numbers & operations
+ * @returns {number} result of the evaluated expression
+ */
 
 function eval(arr) {
     const OPERATIONS = ['/', '*', '-', '+'];
